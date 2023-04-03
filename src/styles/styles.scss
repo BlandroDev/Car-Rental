@@ -1,0 +1,10 @@
+@import "./configs/normalize";
+@import "./components/navBar";
+
+body{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
