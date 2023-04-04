@@ -1,13 +1,13 @@
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faXmark} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import ReactDOM from "react-dom";
 
-export const ModalMenu = ({open,setModal}) => {
+export const ModalMenu = ({ open, setModal }) => {
   return (
     <div className={`modal ${open}`}>
-        <div className="modal__iconClose">
-            <FontAwesomeIcon icon={faXmark} onClick={()=>setModal("")}/>
-        </div>
+      <div className="modal__iconClose">
+        <FontAwesomeIcon icon={faXmark} onClick={() => setModal("")} />
+      </div>
       <main className="modal__main">
         <ul className="modal__ul">
           <li className="modal__li">Inicio</li>
@@ -22,9 +22,9 @@ export const ModalMenu = ({open,setModal}) => {
   );
 };
 
-export function PortalMenu({open,setModal}){
-    return ReactDOM.createPortal(
-      <ModalMenu open={open} setModal={setModal}/>,
-      document.getElementById("modal")
-    );
-  }
+export function PortalMenu({ open, setModal }) {
+  return ReactDOM.createPortal(
+    <ModalMenu open={open} setModal={setModal} />,
+    document.getElementById("modal")
+  );
+}
