@@ -1,10 +1,14 @@
 @import "./configs/normalize";
 @import "./components/navBar";
+@import "./components/home";
+@import "./configs/vars";
+@import "./components/modal";
 
 body{
     width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 30px;
 }
+
+ul, li {
+    margin: 0;
+    padding: 0;
+  }

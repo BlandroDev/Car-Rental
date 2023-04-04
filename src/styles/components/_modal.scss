@@ -1,0 +1,45 @@
+@import "../configs/vars";
+@import "../configs/mixins";
+
+.modal {
+    @include size(100vw,100vh);
+    @include flex(initial);
+    background-color: #fff;
+    position: fixed;
+    z-index: 200;
+    left: -100%;
+    transition: left .5s ease-in-out;
+    &__iconClose {
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        @include icon();
+    }
+
+    &__li {
+        @include font-characteristics(#010103, 30px, 500, initial, (Rubik, sans-serif));
+        list-style: none;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all .3s;
+        text-align: center;
+
+        &:hover {
+            color: #ff4d30;
+        }
+    }
+
+    &__main {
+        @include size(100%,400px);
+        @include flex(initial);
+    }
+
+    &__ul {
+        @include size(fit-content,100%);
+        @include flex(column,30px);
+    }
+}
+
+.open{
+    left: 0%;
+}

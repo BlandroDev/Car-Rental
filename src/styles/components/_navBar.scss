@@ -1,54 +1,65 @@
+@import "../configs/vars";
+@import "../configs/mixins";
+
 .navBar {
-    width: 95vw;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include size(95vw, 60px);
+    @include flex(initial, initial, space-between);
+    padding: 20px 0px;
+    margin: auto;
+
     &__DivSesion {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
+        @include flex(initial, 10px);
+        @include responsive(map-get($medidas, "laptop")){
+            display: none;
+        }
     }
 
     &__button {
-    background-color: #ff4d30;
-    border-radius: 3px;
-    box-shadow: 0 10px 15px 0 rgb(255 83 48 / 35%);
-    color: #fff;
-    width: 115px;
-    height: 45px;
-    transition: all .3s;
-    border: none;
-    font-size: 16px;
-    font-weight: 700;
-    text-decoration: none;
-    &:hover{
-        background-color: #e23217d3
-    }
+        border: none;
+        outline: none;
+        background-color: transparent;
+        transition: all .3s;
+        @include font-characteristics(#010103, 15px, 600, initial, (Rubik, sans-serif));
+
+        &:hover {
+            color: #ff4d30;
+        }
+
+        &--register {
+            @include btnPrimary();
+        }
+        
     }
 
     &__img {
-        width: 120px;
-        height: 50px;
+        @include size(auto, 50px);
     }
 
     &__li {
+        @include font-characteristics(#010103, 15px, 600, initial, (Rubik, sans-serif));
         list-style: none;
-        color: #010103;
-    cursor: pointer;
-    font-family: Rubik,sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all .3s;
-    &:hover{
-        color: #ff4d30;
-    }
+        cursor: pointer;
+        text-decoration: none;
+        transition: all .3s;
+
+        &:hover {
+            color: #ff4d30;
+        }
     }
 
     &__ul {
         display: flex;
         gap: 20px;
+        @include responsive(map-get($medidas, "laptop")){
+            display: none;
+        }
+    }
+
+    &__icon{
+        @include icon();
+        display: none;
+        @include responsive(map-get($medidas, "laptop")){
+            display: block;
+        }
     }
 }

@@ -1,0 +1,105 @@
+@mixin flex ($direction, $gap:initial, $justify:center, $align:center) {
+    @if $direction==column {
+        display: flex;
+        flex-direction: column;
+        justify-content: $justify;
+        align-items: $align;
+        gap: $gap;
+    }
+
+    @else {
+        display: flex;
+        justify-content: $justify;
+        align-items: $align;
+        gap: $gap;
+    }
+}
+
+
+@mixin fullSize ($minWidth, $width, $minHeight, $height) {
+    min-width: $minWidth;
+    width: $width;
+    min-height: $minHeight;
+    height: $height;
+}
+
+
+@mixin margin-padding($margin, $padding:0) {
+    padding: $padding;
+    margin: $margin;
+}
+
+@mixin grid($columns, $rows, $areas, $gap) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+    grid-template-areas: $areas;
+    gap: $gap;
+}
+
+
+@mixin bgImage($url) {
+    background-image: url($url);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin font-characteristics($color, $size:initial, $weight:initial, $letter-spacing:initial, $family:unset) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    letter-spacing: $letter-spacing;
+    font-family: $family;
+}
+
+
+@mixin borders($border, $radius) {
+    border: $border;
+    border-radius: $radius;
+}
+
+@mixin text-characteristics($decoration, $align:initial, $shadow:initial) {
+    text-decoration: $decoration;
+    text-align: $align;
+    text-shadow: $shadow;
+}
+
+@mixin responsive ($width) {
+    @media only screen and (max-width: $width) {
+        @content;
+    }
+}
+
+@mixin btnPrimary() {
+    background-color: #ff4d30;
+    border-radius: 3px;
+    box-shadow: 0 10px 15px 0 rgb(255 83 48 / 35%);
+    color: #fff;
+    width: 115px;
+    height: 45px;
+    transition: all .3s;
+    border: none;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover {
+        background-color: #fa4226;
+        box-shadow: 0 10px 15px 0 rgba(223, 56, 23, 0.459);
+    }
+}
+
+@mixin icon(){
+    font-size: 30px;
+    color: #010103;
+    transition: .3s;
+    &:hover{
+        color: #ff4d30;
+        cursor: pointer;
+    }
+}
