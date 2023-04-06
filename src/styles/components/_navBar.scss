@@ -2,14 +2,16 @@
 @import "../configs/mixins";
 
 .navBar {
-    @include size(95vw, 60px);
+    @include size(95%, 60px);
     @include flex(initial, initial, space-between);
     padding: 20px 0px;
     margin: auto;
+    z-index: 500;
 
     &__DivSesion {
         @include flex(initial, 10px);
-        @include responsive(map-get($medidas, "laptop")){
+
+        @include responsive(map-get($medidas, "laptop")) {
             display: none;
         }
     }
@@ -19,7 +21,7 @@
         outline: none;
         background-color: transparent;
         transition: all .3s;
-        @include font-characteristics(#010103, 15px, 600, initial, (Rubik, sans-serif));
+        @include font-characteristics(map-get($colors, "font-primary"), 16px, 500, initial, map-get($fonts, "global"));
 
         &:hover {
             color: #ff4d30;
@@ -28,7 +30,7 @@
         &--register {
             @include btnPrimary();
         }
-        
+
     }
 
     &__img {
@@ -36,7 +38,7 @@
     }
 
     &__li {
-        @include font-characteristics(#010103, 15px, 600, initial, (Rubik, sans-serif));
+        @include font-characteristics(map-get($colors, "font-primary"), 16px, 500, initial, map-get($fonts, "global"));
         list-style: none;
         cursor: pointer;
         text-decoration: none;
@@ -50,15 +52,17 @@
     &__ul {
         display: flex;
         gap: 20px;
-        @include responsive(map-get($medidas, "laptop")){
+
+        @include responsive(map-get($medidas, "laptop")) {
             display: none;
         }
     }
 
-    &__icon{
+    &__icon {
         @include icon();
         display: none;
-        @include responsive(map-get($medidas, "laptop")){
+
+        @include responsive(map-get($medidas, "laptop")) {
             display: block;
         }
     }

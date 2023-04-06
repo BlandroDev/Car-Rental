@@ -1,5 +1,4 @@
-$medidas:(
-    "mobile-s":320px,
+$medidas:("mobile-s":320px,
     "mobile-m":375px,
     "mobile-l":425px,
     "tablet" :768px,
@@ -7,11 +6,16 @@ $medidas:(
     "laptop-l" : 1440px,
 );
 
-$shadows:(
-    "btn-shadow": 0 10px 15px 0 rgb(255 83 48 / 35%),
+$shadows:("btn-shadow": 0 10px 15px 0 rgb(255 83 48 / 35%),
 );
 
-$colors:(
-    "primary":#ff4d30,
+$colors:("primary":#ff4d30,
+    "secondary" : #010103,
     "primary-dark":#e23217d3,
+    "font-primary" : #010103,
+);
+
+$fonts:("title":('Poppins', sans-serif),
+    "global" : ('Rubik', sans-serif),
+
 );

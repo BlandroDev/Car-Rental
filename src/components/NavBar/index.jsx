@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { PortalMenu } from "../ModalMenu";
-
+import { menu } from "../../data/menu";
 export const NavBar = () => {
   const [modal, setModal] = useState("");
   return (
@@ -14,12 +14,11 @@ export const NavBar = () => {
         className="navBar__img"
       ></img>
       <ul className="navBar__ul">
-        <li className="navBar__li">Inicio</li>
-        <li className="navBar__li">Acerda de</li>
-        <li className="navBar__li">Modelos de vehículos</li>
-        <li className="navBar__li">Nuestro equipo</li>
-        <li className="navBar__li">Testimonios</li>
-        <li className="navBar__li">Contacto</li>
+        {menu.map((menu) => (
+          <li className="navBar__li" key={menu.key}>
+            {menu.title}
+          </li>
+        ))}
       </ul>
       <div className="navBar__DivSesion">
         <button className="navBar__button">Iniciar Sesion</button>
@@ -27,7 +26,7 @@ export const NavBar = () => {
       </div>
       <div className="navBar__icon">
         <FontAwesomeIcon icon={faBars} onClick={() => setModal("open")} />
-        <PortalMenu open={modal} setModal={setModal} />
+        <PortalMenu open={modal} setModal={setModal} menuList={menu} />
       </div>
     </nav>
   );

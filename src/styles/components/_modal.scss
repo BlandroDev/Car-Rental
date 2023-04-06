@@ -2,22 +2,21 @@
 @import "../configs/mixins";
 
 .modal {
-    @include size(100vw,100vh);
+    @include size(100vw, 100vh);
     @include flex(initial);
     background-color: #fff;
     position: fixed;
-    z-index: 200;
-    left: -100%;
+    z-index: 1000;
+    left: -150%;
     transition: left .5s ease-in-out;
+
     &__iconClose {
-        position: absolute;
-        top: 30px;
-        right: 20px;
+        @include position(absolute, 30px, 20px);
         @include icon();
     }
 
     &__li {
-        @include font-characteristics(#010103, 30px, 500, initial, (Rubik, sans-serif));
+        @include font-characteristics(map-get($colors, "font-primary"), 25px, 500, initial, ('Rubik', sans-serif));
         list-style: none;
         cursor: pointer;
         text-decoration: none;
@@ -27,19 +26,23 @@
         &:hover {
             color: #ff4d30;
         }
+
+        @include responsiveHeight(360px) {
+            font-size: 20px
+        }
     }
 
     &__main {
-        @include size(100%,400px);
+        @include size(100%, 400px);
         @include flex(initial);
     }
 
     &__ul {
-        @include size(fit-content,100%);
-        @include flex(column,30px);
+        @include size(fit-content, 100%);
+        @include flex(column, 35px);
     }
 }
 
-.open{
+.open {
     left: 0%;
 }

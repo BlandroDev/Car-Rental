@@ -1,0 +1,51 @@
+@import "../configs/vars";
+@import "../configs/mixins";
+
+.btn-primary {
+    @include flex(initial, 10px);
+    background-color: #ff4d30;
+    border-radius: 3px;
+    box-shadow: 0 10px 15px 0 rgb(255 83 48 / 35%);
+    border: 2px solid map-get($colors, "primary");
+    color: #fff;
+    min-width: 200px;
+    width: auto;
+    padding: 15px 20px;
+    transition: all .3s;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+        background-color: #fa4226;
+        box-shadow: 0 10px 16px 0 rgba(223, 56, 23, 0.459);
+    }
+
+    @include responsive(map-get($medidas, "mobile-l")) {
+        width: 100%
+    }
+}
+
+.btn-secondary {
+    @include flex(initial, 10px);
+    background-color: map-get($colors, "secondary");
+    border-radius: 3px;
+    color: #fff;
+    min-width: 200px;
+    width: auto;
+    padding: 15px 20px;
+    transition: all .3s;
+    border: 2px solid map-get($colors, "secondary");
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+
+    &:hover {
+        background-color: #fff;
+        color: #000000;
+    }
+
+    @include responsive(map-get($medidas, "mobile-l")) {
+        width: 100%
+    }
+}

@@ -1,5 +1,138 @@
 @import "../configs/mixins";
 
-.home{
-    @include size(100vw,100vh);
+.home {
+    @include size(100%, auto);
+    min-height: 100vh;
+    background-color: #f8f8f8;
+    position: relative;
+    z-index: 1;
+
+    &__div {
+        @include size(50vw, 100%);
+        @include position(absolute, 0, 0);
+        background-color: transparent;
+        z-index: -1;
+
+        &--main {
+            display: flex;
+            gap: 20px;
+
+            @include responsive(map-get($medidas, "laptop")) {
+                justify-content: center;
+            }
+
+            @include responsive(map-get($medidas, "mobile-l")) {
+                @include flex(column, 20px);
+            }
+        }
+    }
+
+    &__main {
+        @include size(95%, 100%);
+        @include flex(initial);
+        @include position(absolute, 0, 0, 0);
+        margin: auto;
+        z-index: -1;
+
+        @include responsiveHeight(568px) {
+            position: unset;
+            top: initial;
+            display: block;
+        }
+    }
+
+    &__section {
+        @include size(95vw, auto);
+        @include flex(initial, none, space-between, initial);
+        position: relative;
+        margin: auto;
+
+        @include responsive(map-get($medidas, "laptop")) {
+            justify-content: center;
+        }
+    }
+
+    &__img {
+        &--city {
+            position: absolute;
+            right: 0;
+            @include responsive(map-get($medidas, "laptop")) {
+                display: none;
+            }
+        }
+
+        &--car {
+            position: absolute;
+            right: 0;
+            width: 60%;
+            height: auto;
+
+            @include responsive(map-get($medidas, "laptop")) {
+                display: none;
+            }
+        }
+    }
+
+    &__article {
+        &--main {
+            width: 40%;
+            height: auto;
+
+            @include responsive(map-get($medidas, "laptop")) {
+                width: 70%;
+                text-align: center;
+            }
+
+            @include responsive(map-get($medidas, "tablet")) {
+                width: 90%;
+            }
+
+            @include responsive(map-get($medidas, "mobile-l")) {
+                width: 95%;
+            }
+        }
+    }
+
+    &__h4 {
+        &--main {
+            font-size: 22.5px;
+            margin: 0;
+        }
+    }
+
+    &__h1 {
+        &--main {
+            font-size: 55px;
+            margin: 20px 0px;
+
+            @include responsive(map-get($medidas, "mobile-l")) {
+                font-size: 40px;
+            }
+
+            @include responsive(map-get($medidas, "mobile-m")) {
+                font-size: 30px;
+            }
+
+            @include responsive(map-get($medidas, "mobile-s")) {
+                font-size: 25px;
+                margin: 15px 0px;
+            }
+
+        }
+    }
+
+    &__p {
+        &--main {
+            color: #706f7b;
+            font-weight: 300;
+            line-height: 30px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__span {
+        &--h1 {
+            color: map-get($colors, "primary");
+        }
+    }
 }

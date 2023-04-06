@@ -1,0 +1,22 @@
+@import "../configs/mixins";
+@import "../configs/vars";
+.reserve{
+    @include size(100%,400px);
+    background-color: aquamarine;
+    margin: 0;
+    &__main{
+        @include bgImage(url("src/assets/logos/bg-book.png"));
+        @include size(80%,auto);
+        padding: 45px;
+        max-width: 95%;
+        background-color: #fff;
+        position: relative;
+        box-shadow: 0 10px 20px 0 rgb(0 0 0 / 10%);
+        margin: auto;
+        z-index: 4;
+    }
+
+    &__h2{
+        margin: 0;
+    }
+}

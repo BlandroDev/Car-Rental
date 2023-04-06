@@ -39,7 +39,7 @@
 
 
 @mixin bgImage($url) {
-    background-image: url($url);
+    background-image: $url;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -75,6 +75,12 @@
     }
 }
 
+@mixin responsiveHeight ($height) {
+    @media only screen and (max-height: $height) {
+        @content;
+    }
+}
+
 @mixin btnPrimary() {
     background-color: #ff4d30;
     border-radius: 3px;
@@ -84,8 +90,8 @@
     height: 45px;
     transition: all .3s;
     border: none;
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 500;
     text-decoration: none;
 
     &:hover {
@@ -94,12 +100,21 @@
     }
 }
 
-@mixin icon(){
+@mixin icon() {
     font-size: 30px;
     color: #010103;
     transition: .3s;
-    &:hover{
+
+    &:hover {
         color: #ff4d30;
         cursor: pointer;
     }
+}
+
+@mixin position($position, $top:unset, $right:unset, $left:unset, $bottom:unset) {
+    position: $position;
+    top: $top;
+    right: $right;
+    left: $left;
+    bottom: $bottom;
 }
