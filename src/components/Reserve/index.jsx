@@ -7,7 +7,7 @@ import {
 import { handleSubmit } from "src/functions/handleSubmit";
 export const Reserve = () => {
   return (
-    <section className="reserve" id="reserve">
+    <section className="reserve" id="reservar">
       <main className="reserve__main">
         <h2 className="reserve__h2">Reservar un Coche</h2>
         <form className="reserve__form" onSubmit={handleSubmit}>

@@ -7,7 +7,7 @@ export const FirstBanner = () => {
         </h1>
         <p className="firstBanner__p--content">
           Aeropuertos principales. Proveedores Locales. Soporte
-          <span className="firstBanner__span--content">24/7 .</span>
+          <span className="firstBanner__span--content">&nbsp; 24/7 .</span>
         </p>
       </div>
     </section>

@@ -30,7 +30,7 @@ export const Home = () => {
       <Helmet>
         <title>Car Rental</title>
       </Helmet>
-      <header className="home scrollElement" id="header">
+      <header className="home scrollElement" id="inicio">
         <NavBar />
         <div className="home__div">
           <img
@@ -52,7 +52,7 @@ export const Home = () => {
                 ilimitadas, opciones de recogida flexibles y mucho más.
               </p>
               <div className="home__div--main">
-                <a className="btn-primary home__a" href="#reserve">
+                <a className="btn-primary home__a" href="#reservar">
                   Reservar Paseo <FontAwesomeIcon icon={faCircleCheck} />
                 </a>
                 <button className="home__button--main btn-secondary">
@@ -77,7 +77,7 @@ export const Home = () => {
         <Testimonials padding="paddingHome" bgColor="bg-color-gray" />
         <Questions />
         <Download />
-        <a className="home__scrollUp" id="scrollUp" href="#header">
+        <a className="home__scrollUp" id="scrollUp" href="#inicio">
           <FontAwesomeIcon icon={faAngleUp} />
         </a>
       </main>
