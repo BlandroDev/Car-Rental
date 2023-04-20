@@ -7,15 +7,43 @@ $medidas:("mobile-s":320px,
 );
 
 $shadows:("btn-shadow": 0 10px 15px 0 rgb(255 83 48 / 35%),
+"btn-primary-mixin" : 0 10px 15px 0 rgba(223, 56, 23, 0.459),
+"btn-primary-global" : 0 10px 16px 0 rgba(223, 56, 23, 0.459),
+"people-card": 0 20px 10px 0 rgb(0 0 0 / 8%),
+"testimonials-box" : 0 20px 40px 0 rgb(0 0 0 / 8%),
+"questions-box" : 0 3px 6px 0 rgb(0 0 0 / 10%),
+"reserve-main" : 0 10px 20px 0 rgb(0 0 0 / 10%),
 );
 
 $colors:("primary":#ff4d30,
     "secondary" : #010103,
+    "white" : #fff,
+    "gray" : #777,
     "primary-dark":#e23217d3,
     "font-primary" : #010103,
+    "font-secondary" : #706f7b,
+    "a-footer" : #000000,
+    "bg-primary" : #f8f8f8,
+    "bg-white" : #fff,
+    "bg-input-contact" : #f2f2f2,
+    "bg-first-banner" : #2d2d2d,
+    "bg-second-banner" : rgba(0, 0, 0, 0.795),
+    "bg-people-card" : #f6f6f6,
+    "stars-color" : #ffc933,
+    "reserve-selected" : #ababab,
+    "footer-input" : #ececec,
+    "btn-gray" : #e9e9e9,
+    "btn-secondary-global" : #000000, 
 );
 
 $fonts:("title":('Poppins', sans-serif),
     "global" : ('Rubik', sans-serif),
 
 );
+
+$borders : (
+    "fleet-features" : 2px solid #706f7b,
+    "models" : 1px solid #d5d5d5,
+    "questions-button" : 1px solid rgba(146, 145, 145, 0.048),
+    "reserve-selected" : 1px solid #ccd7e6,
+)

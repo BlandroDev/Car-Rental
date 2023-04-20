@@ -1,0 +1,43 @@
+.firstBanner {
+    @include globalConfig();
+    @include flex(unset);
+    padding: 35px 0px;
+    width: 100%;
+    max-width: 100%;
+    background-color: map-get($colors, "bg-first-banner");
+
+    &__content {
+        width: 95%;
+        color: map-get($colors, "white");
+        max-width: 1366px;
+        margin: auto;
+    }
+
+    &__h1 {
+        &--content {
+            width: 95%;
+            text-align: center;
+            font-size: 50px;
+            letter-spacing: 1px;
+
+            @include responsive(530px) {
+                font-size: 40px;
+                width: 100%;
+            }
+        }
+    }
+
+    &__p {
+        &--content {
+            width: 95%;
+            text-align: center;
+            font-size: 25px;
+        }
+    }
+
+    &__span {
+        &--content {
+            color: map-get($colors, "primary");
+        }
+    }
+}

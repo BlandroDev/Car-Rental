@@ -4,7 +4,7 @@
 .modal {
     @include size(100vw, 100vh);
     @include flex(initial);
-    background-color: #fff;
+    background-color: map-get($colors, "bg-white");
     position: fixed;
     z-index: 1000;
     left: -150%;
@@ -24,7 +24,7 @@
         text-align: center;
 
         &:hover {
-            color: #ff4d30;
+            color: map-get($colors, "primary" );
         }
 
         @include responsiveHeight(360px) {

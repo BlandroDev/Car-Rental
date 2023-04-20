@@ -1,0 +1,125 @@
+.questions {
+    padding: 120px 0px;
+    background-image: url(src/assets/images/backgrounds/bg-questions.png);
+    background-position: 0 70%;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    &__content {
+        max-width: 1366px;
+        margin: auto;
+    }
+
+    &__h4 {
+        &--content {
+            @include h4-config();
+        }
+    }
+
+    &__h2 {
+        &--content {
+            @include h2-config();
+        }
+    }
+
+    &__p {
+        &--content {
+            @include p-config();
+
+            @include responsive(550px) {
+                width: 90%;
+            }
+        }
+
+        &--boxQuestions {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        &--button {
+            margin: 0;
+            width: 90%;
+            text-align: start;
+        }
+    }
+
+    &__boxQuestions {
+        width: 800px;
+        margin: auto;
+        margin-top: 60px;
+        box-shadow: map-get($shadows, "questions-box");
+
+        @include responsive(820px) {
+            width: 90%;
+        }
+    }
+
+    &__button {
+        &--boxQuestions {
+            @include flex(unset, unset, space-between);
+            background-color: map-get($colors, "bg-white");
+            border: none;
+            outline: none;
+            border-bottom: map-get($borders, "questions-button");
+            border-top: map-get($borders, "questions-button");
+            padding: 18px 25px;
+            width: 100%;
+            font-weight: 400;
+            font-size: 18px;
+
+            @include responsive(700px) {
+                font-size: 15px;
+                gap: 10px;
+            }
+
+            @include responsive(600px) {
+                text-align: center;
+            }
+        }
+    }
+
+    &__answers {
+        height: 0;
+        overflow: hidden;
+        color: map-get($colors, "font-secondary");
+        background-color: map-get($colors, "bg-white");
+        line-height: 30px;
+        font-size: 17px;
+        transition: height 0.5s, padding 0.5s;
+    }
+
+    .openAnswer {
+        padding: 20px 0px 0px 0px;
+        height: 200px;
+
+        @include responsive(820px) {
+            height: 270px;
+        }
+
+        @include responsive(580px) {
+            height: 300px;
+        }
+
+        @include responsive(530px) {
+            height: 350px;
+        }
+
+        @include responsive(480px) {
+            height: 450px;
+        }
+
+        @include responsive(350px) {
+            height: 550px;
+        }
+
+        @include responsive(320px) {
+            height: 595px;
+        }
+    }
+
+    .active {
+        background-color: map-get($colors, "primary");
+        color: map-get($colors, "bg-white");
+    }
+
+}

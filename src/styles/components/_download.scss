@@ -1,0 +1,76 @@
+.download {
+    @include bgImage(url(src/assets/images/backgrounds/bg-download.png));
+    width: 100%;
+    background-color: map-get($colors, "bg-primary");
+    background-position: top;
+    padding: 120px 0px;
+
+    @include responsive(700px) {
+        background-image: unset;
+    }
+
+    &__buttons {
+        &--content {
+            width: 550px;
+            @include flex(unset, 20px, flex-start);
+            margin-top: 30px;
+
+            @include responsive(700px) {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    &__content {
+        width: 95%;
+        max-width: 1366px;
+        margin: auto;
+    }
+
+    &__h2 {
+        &--content {
+            font-size: 45px;
+            letter-spacing: 0.5px;
+            line-height: 60px;
+            margin: 0;
+            width: 550px;
+
+            @include responsive(700px) {
+                width: 100%;
+                text-align: center;
+            }
+
+            @include responsive(430px) {
+                width: 100%;
+                text-align: center;
+                font-size: 40px;
+                line-height: 40px;
+            }
+
+            @include responsive(430px) {
+                font-size: 30px;
+            }
+        }
+    }
+
+    &__img {
+        &--content {
+            cursor: pointer;
+        }
+    }
+
+    &__p {
+        &--content {
+            color: map-get($colors, "font-secondary");
+            line-height: 25px;
+            width: 550px;
+
+            @include responsive(700px) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}

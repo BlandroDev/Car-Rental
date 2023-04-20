@@ -1,0 +1,180 @@
+.footer {
+    padding: 100px 0px;
+    width: 100%;
+
+    &__content {
+        @include flex(unset, 30px, space-between, start);
+        flex-wrap: wrap;
+        max-width: 1366px;
+        width: 95%;
+        margin: auto;
+
+        @include responsive(650px) {
+            gap: 100px;
+        }
+
+    }
+
+    &__rentBox {
+        &--content {
+            width: calc(100%/4.5);
+
+            @include responsive(map-get($medidas, "laptop")) {
+                width: 45%;
+            }
+
+            @include responsive(650px) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+    }
+
+    &__companyBox {
+        &--content {
+            width: fit-content;
+
+            @include responsive(map-get($medidas, "laptop")) {
+                width: 45%;
+            }
+
+            @include responsive(650px) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+    }
+
+    &__hoursBox {
+        &--content {
+
+            width: fit-content;
+
+            @include responsive(map-get($medidas, "laptop")) {
+                width: 45%;
+                margin-top: 35px;
+            }
+
+            @include responsive(650px) {
+                width: 100%;
+                text-align: center;
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__suscribeBox {
+        &--content {
+
+            width: calc(100%/4.5);
+
+            @include responsive(map-get($medidas, "laptop")) {
+                width: 45%;
+                margin-top: 35px;
+            }
+
+            @include responsive(650px) {
+                width: 100%;
+                text-align: center;
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__p {
+        &--rentBox {
+            @include p-config(start, (12px 0), 100%, 28px);
+            font-size: 17px;
+            margin-bottom: 25px;
+
+            @include responsive(650px) {
+                text-align: center;
+                width: 80%;
+                margin: auto;
+                margin-bottom: 25px;
+            }
+        }
+
+        &--hoursBox {
+            font-size: 17px;
+        }
+
+        &--suscribeBox {
+            line-height: 25px;
+            font-size: 17px;
+
+        }
+    }
+
+    &__a {
+        &--rentBox {
+            @include flex(unset, 10px, flex-start);
+            margin: 12px 0;
+            font-weight: 500;
+            text-decoration: none;
+            color: map-get($colors, "a-footer");
+            cursor: pointer;
+            transition: color 0.3s;
+
+            &:hover {
+                color: map-get($colors, "primary");
+            }
+
+            @include responsive(650px) {
+                justify-content: center;
+            }
+        }
+        
+    }
+
+    &__ul {
+        &--companyBox {
+            @include flex(column, 17px, center, start);
+            font-size: 17px;
+
+            @include responsive(650px) {
+                align-items: center;
+            }
+        }
+    }
+
+    &__li {
+        &--companyBox {
+            list-style: none;
+            cursor: pointer;
+            transition: color 0.3s;
+
+            &:hover {
+                color: map-get($colors, "primary");
+            }
+        }
+    }
+
+    &__txt {
+        &--suscribeBox {
+            @include footerInput();
+        }
+    }
+
+    &__button {
+        &--suscribeBox {
+            width: 100%;
+            @include btnPrimary(100%, 45px);
+            margin-top: 10px;
+        }
+    }
+
+    .h3 {
+        font-size: 22px;
+        margin: 0px 0px 15px 0px;
+    }
+
+    &__span {
+        &--h3 {
+            font-weight: 300;
+        }
+    }
+
+}

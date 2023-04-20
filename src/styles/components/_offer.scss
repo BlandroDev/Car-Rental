@@ -1,0 +1,149 @@
+.offer {
+    @include flex(column, unset, unset);
+    @include bgImage(url(src/assets/images/backgrounds/bg-offer.png));
+    width: 100%;
+    padding: 120px 0px;
+    background-position: -225px 255px;
+
+    &__container {
+        @include globalConfig();
+        @include flex(column, unset, unset);
+        margin-top: 0;
+    }
+
+    &__img {
+        width: 85%;
+
+        @include responsive(map-get($medidas, "tablet")) {
+            width: 100%;
+            min-height: 150px;
+        }
+    }
+
+    &__content {
+        @include flex(unset, 30px, space-between, flex-start);
+        margin-top: 110px;
+        width: 85%;
+
+        @include responsive(1200px) {
+            width: 95%;
+        }
+
+        @include responsive(map-get($medidas, "laptop")) {
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 70px;
+        }
+    }
+
+    &__description {
+        width: 45%;
+
+        @include responsive(1200px) {
+            width: 50%;
+        }
+
+        @include responsive(map-get($medidas, "laptop")) {
+            @include flex(column);
+            width: 70%;
+        }
+
+        @include responsive(map-get($medidas, "tablet")) {
+            width: 100%;
+        }
+    }
+
+    &__features {
+        @include flex(column, 30px);
+        width: 38%;
+
+        @include responsive(1200px) {
+            width: 50%;
+        }
+
+        @include responsive(map-get($medidas, "laptop")) {
+            width: 70%;
+        }
+
+        @include responsive(map-get($medidas, "tablet")) {
+            width: 100%;
+        }
+    }
+
+    &__h4 {
+        &--description {
+            font-size: 20px;
+            letter-spacing: 0.5px;
+            margin: 0;
+
+            @include responsive(map-get($medidas, "laptop")) {
+                text-align: center;
+            }
+        }
+    }
+
+    &__h2 {
+        &--description {
+            font-size: 40px;
+            margin: 12px 0px 15px 0px;
+
+            @include responsive(map-get($medidas, "laptop")) {
+                text-align: center;
+            }
+        }
+    }
+
+    &__p {
+        &--description {
+            color: map-get($colors, "font-secondary");
+            line-height: 25px;
+            margin: 0;
+            margin-bottom: 20px;
+
+            @include responsive(map-get($medidas, "laptop")) {
+                text-align: center;
+            }
+        }
+
+        &--features {
+            color: map-get($colors, "font-secondary");
+            line-height: 20px;
+
+            @include responsive(500px) {
+                text-align: center;
+            }
+        }
+    }
+
+    &__button {
+        &--description {
+            @include btnPrimary(190px, 55px);
+            @include flex(unset, 7px);
+            font-size: 16px;
+        }
+    }
+
+    &__h3 {
+        &--features {
+            font-size: 25px;
+            margin: 0;
+            margin-bottom: 12px;
+
+            @include responsive(500px) {
+                text-align: center;
+            }
+        }
+    }
+
+    &__box {
+        &--features {
+            @include flex(unset, 5px, center, flex-start);
+
+            @include responsive(500px) {
+                @include flex(column, 5px, center, center);
+            }
+        }
+    }
+
+}

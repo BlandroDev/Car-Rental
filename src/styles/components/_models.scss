@@ -1,0 +1,155 @@
+.models {
+    width: 100%;
+
+    &__content {
+        width: 1100px;
+        margin: auto;
+
+        @include responsive(1120px) {
+            width: 800px;
+            margin-top: 15px;
+        }
+
+        @include responsive(820px) {
+            width: 320px;
+        }
+
+        @include responsive(350px) {
+            width: 95%;
+        }
+    }
+
+    &__h1 {
+        width: 95%;
+        max-width: 1366px;
+        text-align: center;
+        margin: auto;
+        font-size: 45px;
+
+        @include responsive(330px) {
+            font-size: 35px;
+        }
+    }
+
+    &__h4 {
+        @include h4-config();
+        width: 100%;
+        max-width: 1366px;
+        margin: auto;
+        margin-top: 15px;
+
+        @include responsive(500px) {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        @include responsive(380px) {
+            font-size: 18px;
+        }
+    }
+
+    &__boxModels {
+        width: 100%;
+        @include flex(unset, unset, space-between);
+        flex-wrap: wrap;
+
+        @include responsive(1120px) {
+            @include flex(unset, 30px, center);
+
+        }
+    }
+
+    &__model {
+        @include flex(column);
+        border: map-get($borders, "models");
+        width: 345px;
+        margin-top: 45px;
+        padding-bottom: 20px;
+
+        @include responsive(1120px) {
+            margin-top: 0;
+        }
+
+        @include responsive(350px) {
+            width: 100%;
+        }
+    }
+
+    &__img {
+        &--model {
+            @include size(100%, 280px);
+            margin: 0;
+        }
+    }
+
+    &__icons {
+        &--calification {
+            color: map-get($colors, "stars-color");
+        }
+    }
+
+    &__features {
+        &--model {
+            border-bottom: map-get($borders, "models");
+            margin: auto;
+            padding: 20px 0px;
+            width: 85%;
+        }
+    }
+
+    &__calification {
+        &--header {
+            @include flex(unset, unset, space-between);
+            margin: 0;
+            padding-top: 5px;
+        }
+    }
+
+    &__h2 {
+        &--features {
+            @include flex(unset, 30px, space-between);
+            flex-wrap: wrap;
+            font-size: 25px;
+            margin: 0;
+        }
+    }
+
+    &__p {
+        &--header {
+            margin: 0;
+            font-size: 17px;
+            letter-spacing: 0.5px;
+        }
+
+        &--description {
+            color: map-get($colors, "gray");
+            font-weight: 500;
+            font-size: 18px;
+            margin: 0;
+
+        }
+    }
+
+    &__description {
+        &--features {
+            @include flex(unset, unset, space-between);
+        }
+    }
+
+    &__format {
+        &--description {
+            @include flex(unset, 10px);
+            width: fit-content;
+            padding-top: 18px;
+        }
+    }
+
+    &__button {
+        &--model {
+            @include btnPrimary(85%);
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+}

@@ -1,0 +1,130 @@
+.contact {
+    width: 100%;
+
+    &__a {
+        &--description {
+            display: block;
+            margin-top: 15px;
+            font-weight: 500;
+            text-decoration: none;
+            color: map-get($colors, "a-footer");
+            cursor: pointer;
+            transition: color 0.3s;
+
+            &:hover {
+                color: map-get($colors, "primary");
+            }
+        }
+    }
+
+    &__button {
+        &--form {
+            @include btnPrimary(100%, 55px);
+            font-size: 19px;
+        }
+    }
+
+    &__content {
+        @include flex(unset, unset, center, flex-start);
+        background-image: url(src/assets/images/backgrounds/bg-contact.png);
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: auto;
+        width: 92%;
+        max-width: 1266px;
+        margin: auto;
+
+        margin-top: 15px;
+
+        @include responsive(950px) {
+            @include flex(column, 50px);
+        }
+    }
+
+    &__description {
+        width: 50%;
+
+        @include responsive(950px) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__form {
+        @include flex(column, unset, unset, unset);
+
+        width: 50%;
+
+        @include responsive(950px) {
+            width: 100%;
+        }
+    }
+
+    &__h1 {
+        &--description {
+            margin-top: 0;
+            font-size: 45px;
+            width: 60%;
+
+            @include responsive(950px) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__icon {
+        &--description {
+            margin-right: 10px;
+        }
+    }
+
+    &__inputTxt {
+        &--form {
+            outline: none;
+            border: none;
+            background-color: map-get($colors, "bg-input-contact");
+            padding: 20px 0px 20px 25px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__label {
+        &--form {
+            margin-bottom: 12px;
+            font-weight: 500;
+            font-size: 17px;
+        }
+    }
+
+    &__p {
+        &--description {
+            @include p-config(start, (0 0 25px 0), 60%, 25px);
+
+            @include responsive(950px) {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    &__txt {
+        &--form {
+
+            background-color: map-get($colors, "bg-input-contact");
+            outline: none;
+            border: none;
+            padding: 20px 0 0 25px;
+            resize: none;
+            height: 180px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__b {
+        &--label {
+            color: map-get($colors, "primary");
+            font-weight: 400;
+            margin: 0;
+        }
+    }
+}

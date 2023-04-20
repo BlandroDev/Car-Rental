@@ -3,11 +3,11 @@
 
 .btn-primary {
     @include flex(initial, 10px);
-    background-color: #ff4d30;
+    background-color: map-get($colors, "primary");
     border-radius: 3px;
-    box-shadow: 0 10px 15px 0 rgb(255 83 48 / 35%);
+    box-shadow: map-get($shadows, "btn-shadow");
     border: 2px solid map-get($colors, "primary");
-    color: #fff;
+    color: map-get($colors, "bg-white");
     min-width: 200px;
     width: auto;
     padding: 15px 20px;
@@ -17,12 +17,12 @@
     text-decoration: none;
 
     &:hover {
-        background-color: #fa4226;
-        box-shadow: 0 10px 16px 0 rgba(223, 56, 23, 0.459);
+        background-color: map-get($colors, "primary");
+        box-shadow: map-get($shadows, "btn-primary-global");
     }
 
     @include responsive(map-get($medidas, "mobile-l")) {
-        width: 100%
+        width: 270px;
     }
 }
 
@@ -30,7 +30,7 @@
     @include flex(initial, 10px);
     background-color: map-get($colors, "secondary");
     border-radius: 3px;
-    color: #fff;
+    color: map-get($colors, "bg-white");
     min-width: 200px;
     width: auto;
     padding: 15px 20px;
@@ -41,11 +41,21 @@
     text-decoration: none;
 
     &:hover {
-        background-color: #fff;
-        color: #000000;
+        background-color: map-get($colors, "bg-white");
+        color: map-get($colors, "btn-secondary-global");
     }
 
     @include responsive(map-get($medidas, "mobile-l")) {
-        width: 100%
+        width: 270px;
     }
+}
+
+
+
+.borderRight {
+    border-right: map-get($borders, "fleet-features");
+}
+
+.w-100 {
+    width: 100%;
 }

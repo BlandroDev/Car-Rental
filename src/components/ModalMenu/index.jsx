@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import ReactDOM from "react-dom";
+import { Link } from "wouter";
 
 export const ModalMenu = ({ open, setModal, menuList }) => {
   return (
@@ -12,7 +13,9 @@ export const ModalMenu = ({ open, setModal, menuList }) => {
         <ul className="modal__ul">
           {menuList.map((menu) => (
             <li className="modal__li" key={menu.key}>
-              {menu.title}
+              <Link href={menu.link} className="navBar__a">
+                {menu.title}
+              </Link>
             </li>
           ))}
         </ul>

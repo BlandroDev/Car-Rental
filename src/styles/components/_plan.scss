@@ -1,0 +1,68 @@
+.plan {
+    @include globalConfig();
+
+    &__benefits {
+        @include flex(unset, 10px, unset, flex-start);
+        @include size(95%, auto);
+        flex-wrap: wrap;
+        margin: auto;
+    }
+
+    &__box {
+        &--benefits {
+            @include flex(column, unset, flex-start);
+            width: calc((100%/3) - 8px);
+            min-height: 350px;
+            height: auto;
+            text-align: center;
+
+            @include responsive(map-get($medidas, "laptop")) {
+                width: calc((100%/2) - 8px);
+            }
+
+            @include responsive(map-get($medidas, "tablet")) {
+                width: 100%;
+                justify-content: center;
+            }
+
+        }
+    }
+
+    &__h2 {
+        text-align: center;
+        font-size: 45px;
+        letter-spacing: 0.5px;
+        margin: 18px 0px 80px 0px;
+    }
+
+    &__h3 {
+        text-align: center;
+        font-size: 23px;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        margin: 0;
+
+        &--benefits {
+            font-size: 25px;
+            margin: 12px 0px;
+        }
+    }
+
+    &__img {
+        &--benefits {
+            width: 150px;
+
+        }
+    }
+
+    &__p {
+        &--benefits {
+            width: 75%;
+            color: map-get($colors, "font-secondary");
+            line-height: 1.43;
+            font-size: 16.5px;
+            font-weight: lighter;
+            margin: 0;
+        }
+    }
+}

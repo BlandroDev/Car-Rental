@@ -1,0 +1,179 @@
+.fleet {
+    @include flex(column);
+    @include globalConfig();
+
+    &__h3 {
+        font-size: 23px;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    &__h1 {
+        font-size: 45px;
+        letter-spacing: 0.5px;
+        margin: 18px 0px;
+        text-align: center;
+
+        @include responsive(map-get($medidas, "mobile-s")) {
+            font-size: 40px;
+        }
+    }
+
+    &__p {
+        color: map-get($colors, "font-secondary");
+        line-height: 1.43;
+        font-size: 16.5px;
+        font-weight: lighter;
+        margin: 0;
+        margin-bottom: 30px;
+        width: 40%;
+        text-align: center;
+
+        &--features {
+            @include flex(unset);
+            @include size(50%, 75%);
+            margin: 0;
+        }
+
+        @include responsive(map-get($medidas, "tablet")) {
+            width: 70%;
+        }
+
+        @include responsive(400px) {
+            width: 85%;
+        }
+    }
+
+    &__section {
+        @include flex(unset, unset, space-between);
+        width: 100%;
+
+        @include responsive(1024px) {
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+    }
+
+    &__models {
+        &--section {
+            width: calc(100%/4);
+            align-self: start;
+
+            @include responsive(1024px) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__features {
+        &--section {
+            width: calc(100%/5);
+            align-self: start;
+
+            @include responsive(1024px) {
+                width: 40%;
+            }
+
+            @include responsive(map-get($medidas, "tablet")) {
+                width: 70%;
+                margin: auto
+            }
+
+            @include responsive(map-get($medidas, "mobile-l")) {
+                width: 80%;
+            }
+        }
+    }
+
+    &__button {
+        &--models {
+            @include btnGray(90%);
+            @include flex(unset, unset, flex-start);
+            font-size: 19px;
+            padding: 30px;
+            margin-bottom: 8px;
+
+            @include responsive(1295px) {
+                font-size: 17px;
+            }
+
+            @include responsive(1190px) {
+                font-size: 15px;
+            }
+
+            @include responsive(1024px) {
+                width: 100%;
+                font-size: 20px;
+            }
+
+            @include responsive(map-get($medidas, "mobile-s")) {
+                font-size: 18px;
+            }
+        }
+
+        &--features {
+            @include btnPrimary(100%);
+            margin-top: 15px;
+            font-size: 20px;
+        }
+    }
+
+    &__img {
+        &--section {
+            @include size(100%, 100%);
+        }
+    }
+
+    &__div {
+        &--features {
+            @include flex(unset);
+            height: 40px;
+            border: map-get($borders, "fleet-features");
+            border-top: unset;
+
+            &:nth-child(1) {
+                background-color: map-get($colors, "primary");
+                color: map-get($colors, "bg-white");
+                font-size: 23px;
+                border: none;
+
+                @include responsive(1270px) {
+                    font-size: 20px;
+                }
+
+                @include responsive(1120px) {
+                    font-size: 18px;
+                }
+
+                @include responsive(map-get($medidas, "tablet")) {
+                    font-size: 23px;
+                }
+
+                @include responsive(map-get($medidas, "mobile-s")) {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        &--img {
+            @include size(40%, 40%);
+            text-align: center;
+
+            @include responsive(1024px) {
+                @include size(50%, 50%);
+            }
+
+            @include responsive(map-get($medidas, "tablet")) {
+                @include size(100%, 100%);
+            }
+        }
+    }
+
+
+}
+
+.active {
+    background-color: map-get($colors, "primary");
+    color: map-get($colors, "white");
+}

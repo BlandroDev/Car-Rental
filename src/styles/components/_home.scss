@@ -3,7 +3,7 @@
 .home {
     @include size(100%, auto);
     min-height: 100vh;
-    background-color: #f8f8f8;
+    background-color: map-get($colors, "bg-primary");
     position: relative;
     z-index: 1;
 
@@ -27,10 +27,30 @@
         }
     }
 
+    &__a{
+        display: block;
+        text-decoration: none;
+        outline: none;
+        padding-right: 0 !important;
+        padding-left: 0 !important;;
+        margin: 0 !important;
+
+        &:active {
+            outline: none !important;
+            outline-style: none !important;
+        }
+
+        &:focus {
+            outline: none !important;
+            outline-style: none !important;
+        }
+    }
+
     &__main {
         @include size(95%, 100%);
         @include flex(initial);
         @include position(absolute, 0, 0, 0);
+        max-width: 1366px;
         margin: auto;
         z-index: -1;
 
@@ -56,16 +76,16 @@
         &--city {
             position: absolute;
             right: 0;
+
             @include responsive(map-get($medidas, "laptop")) {
                 display: none;
             }
         }
 
         &--car {
+            @include size(60%,auto);
             position: absolute;
             right: 0;
-            width: 60%;
-            height: auto;
 
             @include responsive(map-get($medidas, "laptop")) {
                 display: none;
@@ -75,8 +95,7 @@
 
     &__article {
         &--main {
-            width: 40%;
-            height: auto;
+            @include size(40%,auto);
 
             @include responsive(map-get($medidas, "laptop")) {
                 width: 70%;
@@ -123,7 +142,7 @@
 
     &__p {
         &--main {
-            color: #706f7b;
+            color: map-get($colors, "font-secondary");
             font-weight: 300;
             line-height: 30px;
             margin-bottom: 30px;
@@ -135,4 +154,26 @@
             color: map-get($colors, "primary");
         }
     }
+
+    &__scrollUp {
+        @include flex(unset);
+        @include size(35px, 35px);
+        text-decoration: none;
+        color: map-get($colors, "white");
+        background-color: map-get($colors, "primary");
+        border: 3px solid map-get($colors, "bg-white");
+        font-size: 25px;
+        text-align: center;
+        z-index: 80;
+        position: fixed;
+        right: 53px;
+        bottom: 53px;
+        cursor: pointer;
+        display: none;
+
+    }
+}
+
+.scrollUp-active {
+    display: flex;
 }

@@ -1,0 +1,130 @@
+.testimonials {
+    width: 100%;
+    overflow: hidden;
+
+    &__boxTestimonial {
+        &--content {
+            @include size(35%, 100%);
+            background-color: map-get($colors, "bg-white");
+            box-shadow: map-get($shadows, "testimonials-box");
+            padding: 40px;
+
+            margin-top: 40px;
+
+            @include responsive(1120px) {
+                width: 40%;
+            }
+
+            @include responsive(map-get($medidas, "laptop")) {
+                width: 60%;
+            }
+
+            @include responsive(570px) {
+                width: 70%;
+            }
+
+            @include responsive(330px) {
+                padding: 30px;
+            }
+        }
+    }
+
+
+    &__content {
+        @include globalConfig();
+        @include flex(unset, 30px);
+        flex-wrap: wrap;
+        margin-top: 0;
+
+    }
+
+    &__footer {
+        &--content {
+            @include flex(unset, unset, space-between);
+
+        }
+    }
+
+    &__h5 {
+        &--footer {
+            margin: 0;
+            font-size: 18px;
+
+            @include responsive(360px) {
+                font-size: 15px;
+            }
+        }
+    }
+
+    &__h4 {
+        &--boxTitles {
+            @include h4-config();
+        }
+    }
+
+    &__h2 {
+        &--boxTitles {
+            @include h2-config();
+        }
+    }
+
+    &__img {
+        &--footer {
+            width: 80px;
+            border-radius: 50%;
+        }
+    }
+
+    &__p {
+        &--footer {
+            margin: 0;
+        }
+
+        &--header {
+            font-size: 25px;
+            font-weight: 400;
+            margin: 0px 0px 30px 0px;
+        }
+
+        &--boxTtitles {
+            @include p-config();
+
+            @include responsive(570px) {
+                width: 90%;
+            }
+        }
+    }
+
+    &__perfilBox {
+        &--content {
+            @include flex(unset, 20px);
+        }
+    }
+
+    &__icon {
+        &--footer {
+            color: map-get($colors, "primary");
+            font-size: 65px;
+
+            @include responsive(570px) {
+                font-size: 45px;
+            }
+
+            @include responsive(330px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.paddingHome {
+    padding: 115px 0px;
+}
+
+.bg-color-gray {
+    background-color: map-get($colors, "bg-primary");
+}
+
+.paddingTestimonialsPage {
+    padding: 15px 0px 55px 0px;
+}

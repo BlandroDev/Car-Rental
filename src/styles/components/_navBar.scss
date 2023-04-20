@@ -4,6 +4,7 @@
 .navBar {
     @include size(95%, 60px);
     @include flex(initial, initial, space-between);
+    max-width: 1366px;
     padding: 20px 0px;
     margin: auto;
     z-index: 500;
@@ -11,7 +12,7 @@
     &__DivSesion {
         @include flex(initial, 10px);
 
-        @include responsive(map-get($medidas, "laptop")) {
+        @include responsive(1145px) {
             display: none;
         }
     }
@@ -24,7 +25,7 @@
         @include font-characteristics(map-get($colors, "font-primary"), 16px, 500, initial, map-get($fonts, "global"));
 
         &:hover {
-            color: #ff4d30;
+            color: map-get($colors, "primary");
         }
 
         &--register {
@@ -35,6 +36,7 @@
 
     &__img {
         @include size(auto, 50px);
+        cursor: pointer;
     }
 
     &__li {
@@ -45,7 +47,7 @@
         transition: all .3s;
 
         &:hover {
-            color: #ff4d30;
+            color: map-get($colors, "primary");
         }
     }
 
@@ -53,7 +55,7 @@
         display: flex;
         gap: 20px;
 
-        @include responsive(map-get($medidas, "laptop")) {
+        @include responsive(1145px) {
             display: none;
         }
     }
@@ -62,8 +64,31 @@
         @include icon();
         display: none;
 
-        @include responsive(map-get($medidas, "laptop")) {
+        @include responsive(1145px) {
             display: block;
+        }
+    }
+
+    &__a {
+        text-decoration: none;
+        @include font-characteristics(map-get($colors, "font-primary"), 16px, 500, initial, map-get($fonts, "global"));
+        list-style: none;
+        cursor: pointer;
+        transition: all .3s;
+        outline: none;
+
+        &:hover {
+            color: map-get($colors, "primary");
+        }
+
+        &:active {
+            outline: none !important;
+            outline-style: none !important;
+        }
+
+        &:focus {
+            outline: none !important;
+            outline-style: none !important;
         }
     }
 }
