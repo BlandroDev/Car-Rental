@@ -5,6 +5,7 @@ import { Models } from "../pages/Models";
 import { OurTeam } from "../pages/OurTeam";
 import { Opinions } from "../pages/Opinions";
 import { Contact } from "../pages/Contact";
+import { Error } from "../Error";
 
 export const RoutesPage = () => {
   return (
@@ -17,7 +18,7 @@ export const RoutesPage = () => {
         <Route path="/testimonios" component={Opinions} />
         <Route path="/contacto" component={Contact} />
         <Route>
-          <h1>Pagina no encontrada</h1>
+          <Error error="!Oops Error 404 Página no encontrada"/>
         </Route>
       </Switch>
     </>

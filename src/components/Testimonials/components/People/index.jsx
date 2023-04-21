@@ -14,7 +14,7 @@ export const People = ({ testimonial, name, city, src }) => {
             alt="Imagen de Persona"
           ></img>
           <div className="testimonials__peopleData--footer">
-            <h5 className="testimonials__h5--footer">{name}</h5>
+            <h4 className="testimonials__h4--footer">{name}</h4>
             <p className="testimonials__p--footer">{city}</p>
           </div>
         </div>

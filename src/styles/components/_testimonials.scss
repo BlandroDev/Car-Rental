@@ -45,7 +45,7 @@
         }
     }
 
-    &__h5 {
+    &__h4 {
         &--footer {
             margin: 0;
             font-size: 18px;
@@ -54,9 +54,7 @@
                 font-size: 15px;
             }
         }
-    }
 
-    &__h4 {
         &--boxTitles {
             @include h4-config();
         }

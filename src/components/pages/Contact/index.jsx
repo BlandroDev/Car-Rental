@@ -53,26 +53,32 @@ export const Contact = () => {
           </a>
         </div>
         <form className="contact__form" onSubmit={handleSubmit}>
-          <label className="contact__label--form">
+          <label className="contact__label--form" htmlFor="contact_name">
             Nombre completo <b className="contact__b--label">*</b>
           </label>
           <input
             className="contact__inputTxt--form"
             placeholder='Ej: "Fernando Ruiz"'
+            name="contact_name"
+            id="contact_name"
           />
-          <label className="contact__label--form">
+          <label className="contact__label--form" htmlFor="contact_email">
             Correo electrónico <b className="contact__b--label">*</b>
           </label>
           <input
             className="contact__inputTxt--form"
             placeholder="sucorreoelectronico@ejemplo.com"
+            name="contact_email"
+            id="contact_email"
           />
-          <label className="contact__label--form">
+          <label className="contact__label--form" htmlFor="contact_text">
             Cuéntanos al respecto <b className="contact__b--label">*</b>
           </label>
           <textarea
             className="contact__txt--form"
             placeholder="Escribe aquí..."
+            name="contact_text"
+            id="contact_text"
           />
           <button className="contact__button--form">
             <FontAwesomeIcon

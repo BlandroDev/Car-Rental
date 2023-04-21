@@ -1,0 +1,29 @@
+.error {
+    width: 100%;
+    height: 100vh;
+    @include bgImage(url(src/assets/images/backgrounds/bg-offer.png));
+    background-position: -225px 255px;
+    &__main{
+        @include flex(column);
+        width: 95%;
+        height: 100%;
+        max-width: 1366px;
+        margin: auto;
+    }
+    &__a {
+        @include flex(unset);
+        text-decoration: none;
+        outline: none;
+        @include btnPrimary(250px);
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        font-size: 23px;
+    }
+
+    &__h1 {
+        text-align: center;
+        font-size: 45px;
+        color: map-get($colors, "secondary");
+    }
+}

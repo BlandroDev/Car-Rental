@@ -12,7 +12,7 @@ export const Models = () => {
       </Helmet>
       <NavBar />
       <h4 className="models__h4">Reserva tu paseo ahora</h4>
-      <h1 className="models__h1">Elige tu modelo favorito</h1>
+      <h1 className="models__h1">Elegí el que más te conviene</h1>
       <div className="models__content">
         <div className="models__boxModels">
           {cars.map((models) => (
