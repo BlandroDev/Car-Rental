@@ -11,7 +11,7 @@ export const OurTeam = () => {
         <title>Car Rental | Nuestro equipo</title>
       </Helmet>
       <NavBar />
-      <h4 className="team__h4">Las personas que hacen posible esto</h4>
+      <h4 className="team__h4">Talento humano</h4>
       <h1 className="team__h1">Conocé a nuestro equipo</h1>
       <div className="team__content">
         {team.map((people) => (
