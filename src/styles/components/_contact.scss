@@ -34,7 +34,7 @@
         max-width: 1266px;
         margin: auto;
 
-        margin-top: 15px;
+        padding-top: 60px;
 
         @include responsive(950px) {
             @include flex(column, 50px);

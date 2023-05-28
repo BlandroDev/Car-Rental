@@ -15,7 +15,7 @@ export const About = () => {
       <Helmet>
         <title>Car Rental | Acerca de</title>
       </Helmet>
-      <NavBar />
+      <NavBar className="navBar__image" title={"Acerca de"} subtitle={"Acerca de"}/>
       <div className="about__content">
         <img
           className="about__img--content"

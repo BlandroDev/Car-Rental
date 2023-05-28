@@ -10,9 +10,7 @@ export const Models = () => {
       <Helmet>
         <title>Car Rental | Modelos</title>
       </Helmet>
-      <NavBar />
-      <h4 className="models__h4">Reserva tu paseo ahora</h4>
-      <h1 className="models__h1">Elegí el que más te conviene</h1>
+      <NavBar className="navBar__image" title={"Modelos"} subtitle={"Modelos"}/>
       <div className="models__content">
         <div className="models__boxModels">
           {cars.map((models) => (

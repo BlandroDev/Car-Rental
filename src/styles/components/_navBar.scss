@@ -2,13 +2,6 @@
 @import "../configs/mixins";
 
 .navBar {
-    @include size(95%, 60px);
-    @include flex(initial, initial, space-between);
-    max-width: 1366px;
-    padding: 20px 0px;
-    margin: auto;
-    z-index: 500;
-
     &__DivSesion {
         @include flex(initial, 10px);
 
@@ -91,4 +84,52 @@
             outline-style: none !important;
         }
     }
+
+    &__p{
+        &--absolute{
+            font-weight: 500;
+        }
+    }
+
+    &__absolute{
+        background-color: hsla(0,0%,100%,.92);
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+
+        &--description{
+            position: absolute;
+            bottom: 45px;
+            width: 95%;
+            margin: auto;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    &__links{
+        @include size(95%, 60px);
+        @include flex(initial, initial, space-between);
+        max-width: 1366px;
+        padding: 20px 0px;
+        margin: auto;
+        z-index: 500;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+.navBar__image{
+    background-image: url(/src/assets/images/navBar/navBar.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    position: relative;
+    width: 100%;
+    backdrop-filter: blur(50%);
 }

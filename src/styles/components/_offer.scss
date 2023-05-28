@@ -116,7 +116,7 @@
         }
     }
 
-    &__button {
+    &__a {
         &--description {
             @include btnPrimary(190px, 55px);
             @include flex(unset, 7px);

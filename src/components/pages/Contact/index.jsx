@@ -16,7 +16,7 @@ export const Contact = () => {
       <Helmet>
         <title>Car Rental | Contacto</title>
       </Helmet>
-      <NavBar />
+      <NavBar className="navBar__image" title={"Contacto"} subtitle={"Contacto"}/>
       <div className="contact__content">
         <div className="contact__description">
           <h1 className="contact__h1--description">

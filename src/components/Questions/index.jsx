@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 export const Questions = () => {
-  const [firstQuestion, setFirstQuestion] = useState(false);
+  const [firstQuestion, setFirstQuestion] = useState(true);
   const [secondQuestion, setSecondQuestion] = useState(false);
   const [thirdQuestion, setThirdQuestion] = useState(false);
   return (

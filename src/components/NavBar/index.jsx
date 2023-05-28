@@ -5,10 +5,11 @@ import { useState } from "react";
 import { PortalMenu } from "../ModalMenu";
 import { menu } from "../../data/menu";
 import { Link } from "wouter";
-export const NavBar = () => {
+export const NavBar = ({className = false,title,subtitle}) => {
   const [modal, setModal] = useState("");
   return (
-    <nav className="navBar">
+    <nav className={`navBar ${className ? className : ""}`}>
+      <div className="navBar__links">
       <Link href="/">
         <img
           src={logoSrc}
@@ -33,6 +34,13 @@ export const NavBar = () => {
         <FontAwesomeIcon icon={faBars} onClick={() => setModal("open")} />
         <PortalMenu open={modal} setModal={setModal} menuList={menu} />
       </div>
+      </div>
+      {className && <div className={`navBar__absolute`}>
+        <div className="navBar__absolute--description">
+        <h1>{title}</h1>
+        <p className="navBar__p--absolute">{`Home / ${subtitle}`}</p>
+        </div>
+      </div>}
     </nav>
   );
 };

@@ -9,7 +9,7 @@ export const Opinions = () => {
       <Helmet>
         <title>Car Rental | Testimonios</title>
       </Helmet>
-      <NavBar />
+      <NavBar className="navBar__image" title={"Testimonios"} subtitle={"Testimonios"}/>
       <Testimonials padding="paddingTestimonialsPage" />
       <SecondBanner />
       <Footer />

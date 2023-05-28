@@ -19,6 +19,7 @@ import { Footer } from "src/components/Footer";
 import { useEffect } from "react";
 import { ObserverScrollUp } from "src/functions/ObserverScrollUp";
 import { Helmet } from "react-helmet";
+import { Link } from "wouter";
 export const Home = () => {
   useEffect(() => {
     const scrollUpRefContainer = document.querySelector(".scrollElement");
@@ -55,9 +56,9 @@ export const Home = () => {
                 <a className="btn-primary home__a" href="#reservar">
                   Reservar Paseo <FontAwesomeIcon icon={faCircleCheck} />
                 </a>
-                <button className="home__button--main btn-secondary">
+                <Link href="/modelos" className="btn-secondary home__a">
                   Ver Más <FontAwesomeIcon icon={faAngleRight} />
-                </button>
+                </Link>
               </div>
             </article>
             <img

@@ -25,9 +25,9 @@ export const Offer = () => {
               diseñadas para brindarle la mejor experiencia de alquiler, así que
               no pierda la oportunidad de ahorrar en grande.
             </p>
-            <button className="offer__button--description">
+            <a className="offer__a--description" href="#reservar">
               Búscar Detalles <FontAwesomeIcon icon={faAngleRight} />
-            </button>
+            </a>
           </div>
           <div className="offer__features">
             <div className="offer__box--features">
