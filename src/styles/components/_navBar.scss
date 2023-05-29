@@ -106,6 +106,9 @@
             margin: auto;
             left: 0;
             right: 0;
+            @include responsive(950px){
+                bottom: 120px;
+            }
         }
     }
 
@@ -132,4 +135,7 @@
     position: relative;
     width: 100%;
     backdrop-filter: blur(50%);
+    @include responsive(950px){
+        height: 400px;
+    }
 }

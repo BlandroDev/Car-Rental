@@ -38,7 +38,7 @@ export const NavBar = ({className = false,title,subtitle}) => {
       {className && <div className={`navBar__absolute`}>
         <div className="navBar__absolute--description">
         <h1>{title}</h1>
-        <p className="navBar__p--absolute">{`Home / ${subtitle}`}</p>
+        <p className="navBar__p--absolute"><Link href="/" className="navBar__a">Home</Link> / {subtitle}</p>
         </div>
       </div>}
     </nav>
